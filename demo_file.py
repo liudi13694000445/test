@@ -12,3 +12,5 @@ __import__('os').system('ls')
 print("lll")
 
 print("test")
+
+print("ooo")
