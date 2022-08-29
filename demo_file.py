@@ -1,16 +1,7 @@
-# print(eval("1+1"))
-# print(eval("'*' * 10"))
-# print(type(eval("[1, 2, 3]")))
-# print(type(eval("{'name': 'xiaoming'}")))
+import pymysql
 
-import os
-os.system("ls")
+# def mysql():
 
-
-__import__('os').system('ls')
-
-print("lll")
-
-print("test")
-
-print("ooo")
+db = pymysql.connect(host="rm-2ze61bh4321555111.mysql.rds.aliyuncs.com", user="root", password="poiuy)(*&^123", db="chengdu_password")
+cursor = db.cursor()
+print(cursor)

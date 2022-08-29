@@ -9,10 +9,10 @@ with SSHTunnelForwarder(
         ssh_private_key_password="",  # 跳转机的用户密码
         remote_bind_address=('rm-2ze61bh4321555111.mysql.rds.aliyuncs.com', 3306)) as server:  # mysql服务器的address，端口号
     db = pymysql.connect(host='127.0.0.1',  # 此处必须是是127.0.0.1
-                           port=server.local_bind_port,
-                           user='root',  # 数据库用户名
-                           passwd='poiuy)(*&^123',  # 数据库密码
-                           db='chengdu_passport' # 数据库名称
+                         port=server.local_bind_port,
+                         user='root',  # 数据库用户名
+                         passwd='poiuy)(*&^123',  # 数据库密码
+                         db='chengdu_passport' # 数据库名称
                            )
 
     cursor = db.cursor()
