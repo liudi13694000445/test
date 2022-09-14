@@ -1,6 +1,5 @@
 import json
 import requests
-import pytest
 import os, sys
 sys.path.append(os.getcwd())
 from utils.dbtools import SSH_select
