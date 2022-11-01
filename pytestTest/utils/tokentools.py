@@ -1,6 +1,3 @@
-import os
-
-
 def save_token(res):
     with open("token.txt", "w") as f:
         token = res.json()["data"]["user"]["token"]
