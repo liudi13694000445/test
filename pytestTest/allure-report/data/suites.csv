@@ -1,3 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Nov 01 20:14:29 CST 2022","Tue Nov 01 20:14:31 CST 2022","1934","case","test_login","","","","test_01_login",""
 "passed","Thu Oct 27 18:29:32 CST 2022","Thu Oct 27 18:29:34 CST 2022","2018","case","test_login","","","","test_02_lupin",""
-"passed","Thu Oct 27 18:29:31 CST 2022","Thu Oct 27 18:29:32 CST 2022","1709","case","test_login","","","","test_01_login",""
+"passed","Tue Nov 01 20:14:28 CST 2022","Tue Nov 01 20:14:29 CST 2022","1678","case","test_game","","","","test_01_login",""

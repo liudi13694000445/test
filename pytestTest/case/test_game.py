@@ -21,3 +21,11 @@ def test_01_login():
     token = json.loads(res.text)["data"]["user"]["token"]
     save_token(res)
     return token
+
+
+# def test_02_game():
+#     u = 'http://admin-activity.test.hualiantv.com'
+#     d = {"token":read_token()}
+#     res = requests.get(url=u, data=d)
+#     res_json = json.dumps(json.loads(res.text), indent=4, ensure_ascii=False)
+#     print(res_json)

@@ -2,7 +2,6 @@ import os
 
 
 def save_token(res):
-    os.chdir("utils")
     with open("token.txt", "w") as f:
         token = res.json()["data"]["user"]["token"]
         f.writelines(token)
