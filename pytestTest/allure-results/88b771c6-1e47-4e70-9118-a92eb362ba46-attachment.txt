@@ -1,0 +1,2 @@
+['40003807', '40003816']
+SELECT * from user_destroy_ub_bak where uid in ('40003807', '40003816')
