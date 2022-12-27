@@ -35,10 +35,10 @@ def test_02_find():
     for c in b:
         uids.append(c["uid"])
     print(uids)
-
-    sql_ssh = "SELECT * from user_destroy_ub_bak where uid in (%s)" % tuple(uids)
+    sql_ssh = "SELECT * from user_destroy_ub_bak where uid in %s" % str(tuple(uids))
+    print(sql_ssh)
     assert len(SSH_select(sql_ssh)) == 0
-    # sql_ssh = "SELECT * from user_destroy_his where uid in (%s)" % tuple(uids)
-    # assert len(SSH_select(sql_ssh)) == 0
-    # sql_ssh = "select source from user where uid in (%s)" % tuple(uids)
-    # assert sql_ssh != "destroy"
+    sql_ssh = "SELECT * from user_destroy_his where uid in %s" % str(tuple(uids))
+    assert len(SSH_select(sql_ssh)) == 0
+    sql_ssh = "select source from user where uid in %s" % str(tuple(uids))
+    assert sql_ssh != "destroy"
