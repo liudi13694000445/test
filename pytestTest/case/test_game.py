@@ -24,8 +24,10 @@ def test_01_login():
 
 
 # def test_02_game():
-#     u = 'http://admin-activity.test.hualiantv.com'
-#     d = {"token":read_token()}
+#     u = "http://admin-activity.test.hualiantv.com"
+#     d = {"token": read_token(),
+#          "uid": "40000691",}
 #     res = requests.get(url=u, data=d)
 #     res_json = json.dumps(json.loads(res.text), indent=4, ensure_ascii=False)
 #     print(res_json)
+
