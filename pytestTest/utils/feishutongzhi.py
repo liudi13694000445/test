@@ -2,9 +2,7 @@
 # -*- encoding:utf-8 -*-
 
 import sys
-
 import requests
-
 import time
 
 JOB_URL = sys.argv[1]

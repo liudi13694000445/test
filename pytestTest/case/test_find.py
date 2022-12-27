@@ -38,7 +38,7 @@ def test_02_find():
 
     sql_ssh = "SELECT * from user_destroy_ub_bak where uid in (%s)" % tuple(uids)
     assert len(SSH_select(sql_ssh)) == 0
-    sql_ssh = "SELECT * from user_destroy_his where uid in (%s)" % tuple(uids)
-    assert len(SSH_select(sql_ssh)) == 0
-    sql_ssh = "select source from user where uid in (%s)" % tuple(uids)
-    assert sql_ssh != "destroy"
+    # sql_ssh = "SELECT * from user_destroy_his where uid in (%s)" % tuple(uids)
+    # assert len(SSH_select(sql_ssh)) == 0
+    # sql_ssh = "select source from user where uid in (%s)" % tuple(uids)
+    # assert sql_ssh != "destroy"
