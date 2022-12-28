@@ -1,1 +1,1 @@
-[{"name":"Jenkins","type":"jenkins","url":"http://localhost:8080/","buildOrder":61,"buildName":"ApiTest #61","buildUrl":"http://localhost:8080/job/ApiTest/61/","reportName":"AllureReport","reportUrl":"http://localhost:8080/job/ApiTest/61/allure"}]
+[{"name":"Jenkins","type":"jenkins","url":"http://127.0.0.1:8080/","buildOrder":86,"buildName":"ApiTest #86","buildUrl":"http://127.0.0.1:8080/job/ApiTest/86/","reportName":"AllureReport","reportUrl":"http://127.0.0.1:8080/job/ApiTest/86/allure"}]

@@ -1,0 +1,4 @@
+{'errno': 0, 'errmsg': '', 'consume': 91, 'time': 1672234961, 'data': {'list': [{'timbre': '', 'uid': '40003842', 'nickname': '不过现在也', 'avatar': 'https://img.s3.hualiantv.com/hualian-houtai/cGFzc3BvcnQtMTZlNTNhMjBkZGE2MmFmYWI2MmVkNWEyYjFiODhmOWIuanBn', 'signature': '', 'gender': 'M', 'location': '太空', 'level': 0, 'age': 18, 'seat_box': '', 'new_seat_box_url': '', 'seat_box_hash': ''}], 'more': False, 'offset': 20}}
+{'list': [{'timbre': '', 'uid': '40003842', 'nickname': '不过现在也', 'avatar': 'https://img.s3.hualiantv.com/hualian-houtai/cGFzc3BvcnQtMTZlNTNhMjBkZGE2MmFmYWI2MmVkNWEyYjFiODhmOWIuanBn', 'signature': '', 'gender': 'M', 'location': '太空', 'level': 0, 'age': 18, 'seat_box': '', 'new_seat_box_url': '', 'seat_box_hash': ''}], 'more': False, 'offset': 20}
+['40003842']
+SELECT * from user_destroy_ub_bak where uid in (40003842)

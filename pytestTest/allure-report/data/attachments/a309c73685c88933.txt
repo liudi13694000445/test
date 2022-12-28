@@ -1,0 +1,3 @@
+anchor
+['40003842']
+SELECT * from user_destroy_ub_bak where uid in (40003842)

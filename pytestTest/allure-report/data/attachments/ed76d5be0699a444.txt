@@ -1,0 +1,4 @@
+{'list': [{'liveid': '2048', 'prid': '364248', 'timbre': '磁性大叔音', 'uid': '40001433', 'nickname': '神奇`', 'avatar': 'https://picture.s3.hualiantv.com/hualian-tupian/aW1hZ2U0MDAwMTQzMzE2NjEyMzYyMTUuZ2lm', 'signature': '这家伙什么也没说@', 'gender': 'M', 'location': '北京 朝阳', 'level': 44, 'age': 18, 'seat_box': 'https://static.s3.huajiao.com/Object.access/hj-video/ZWJlMDUxMDIyZDMzMTAyYjE5YmJkZTgwN2E5MTk1NWYucG5n', 'new_seat_box_url': 'https://static.s3.huajiao.com/Object.access/hj-video/ZWJlMDUxMDIyZDMzMTAyYjE5YmJkZTgwN2E5MTk1NWYucG5n', 'seat_box_hash': '53ee9462a154d882ca1afcd4d88d9b13'}], 'more': False, 'offset': 30}
+['40001433']
+user
+SELECT * from user_destroy_ub_bak where uid in ('40001433',)
