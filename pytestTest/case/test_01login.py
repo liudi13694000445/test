@@ -39,6 +39,15 @@ def test_02_anchorLogin():
     token = json.loads(res.text)["data"]["user"]["token"]
     anchor_saveToken(res)
     return token
+
+
+
+
+
+
+
+
+
 """
 活动，游戏中奖率，压测
 注册登陆（三方登陆），私信  上下麦 弹幕，（付费弹幕，查库）。首页，动态页，
