@@ -56,45 +56,89 @@ def after_md5(pwd):
 
 
 password = after_md5('123456')
-# print(password)
+print(password)
 
+
+def test_03_login():
+    print(password)
 
 #  线上环境用户登陆
-def test_03_userLogin():
-    u = "http://passport.test.hualiantv.com/user/login"
-    d = {"guid": "38d034286665f2042589460bed6ecc5d",
-         "time": "1672309999",
-         "rand": "1608060452",
-         "netspeed": "0",
-         "dui": "1F1F1DF9-48DC-41CA-ACCE-A3F3BEF9BFEA",
-         "sv": "16.1.1",
-         "smid": "1F1F1DF9-48DC-41CA-ACCE-A3F3BEF9BFEA",
-         "channel": "Apple",
-         "lng": "0.000000",
-         "version": "1.11.20",
-         "clientip": "",
-         "deviceid": "1F1F1DF9-48DC-41CA-ACCE-A3F3BEF9BFEA",
-         "platform": "ios",
-         "ios_bundleid": "com.huayin.hualian",
-         "product": "hualian",
-         "lat": "0.000000",
-         "network": "Wi-Fi",
-         "model": "iPhone10,1",
-         "deviceModel": "iPhone8",
-         "sm_deviceid": "2019051615024550a43d5731e76e3386a37936d4beb3eb0169de22de2862c7",
-         "no_sign": "1",
-         "mobile": "13694000445",
-         "password": "%s" % password}
-    res = requests.post(url=u, data=d)
-    res_json = json.dumps(json.loads(res.text), indent=4, ensure_ascii=False)
-    # print(res_json)
-    assert res.status_code == 200
-    assert json.loads(res.text).get("errno") == 0
-    sql_ssh = "select * from user where rid = '{}'".format(d.get("mobile"))
-    assert len(SSH_select(sql_ssh)) != 0
-    token = json.loads(res.text)["data"]["token"]
-    user_saveToken(res)
-    return token
+# def test_03_userLogin():
+#     u = "http://passport.hualiantv.com/user/login"
+#     d = {"userid": "0",
+#          "guid": "70e0415f83076b6304cf63062f3152b6",
+#          "time": "1672392763",
+#          "rand": "1368959256",
+#          "netspeed": "0",
+#          "dui": "BF050D32-67FF-464D-8B93-8032B33871C6",
+#          "sv": "16.1.1",
+#          "smid": "BF050D32-67FF-464D-8B93-8032B33871C6",
+#          "channel": "Apple",
+#          "lng": "0.000000",
+#          "version": "1.11.20",
+#          "clientip": "",
+#          "deviceid": "BF050D32-67FF-464D-8B93-8032B33871C6",
+#          "platform": "ios",
+#          "ios_bundleid": "com.huayin.chat",
+#          "product": "hualian",
+#          "lat": "0.000000",
+#          "network": "Wi-Fi",
+#          "model": "iPhone10,1",
+#          "deviceModel": "iPhone8",
+#          "sm_deviceid": "20220811142750bab70f956bd4e84483a6e40fca6d815f0162d0cfa4147701",
+#          "appsource": "3",
+#          "check": "1",
+#          "mbcode": "+86",
+#          # "no_sign": "1",
+#          "mobile": "13944443595",
+#          "password": "%s" % password}
+#     res = requests.post(url=u, data=d)
+#     res_json = json.dumps(json.loads(res.text), indent=4, ensure_ascii=False)
+#     # print(res_json)
+#     assert res.status_code == 200
+#     assert json.loads(res.text).get("errno") == 0
+#     sql_ssh = "select * from user where rid = '{}'".format(d.get("mobile"))
+#     assert len(SSH_select(sql_ssh)) != 0
+#     token = json.loads(res.text)["data"]["token"]
+#     user_saveToken(res)
+#     return token
+
+
+# def test_04_anchorLogin():
+#     u = "http://passport.hualiantv.com/user/login"
+#     d = {"guid": "38d034286665f2042589460bed6ecc5d",
+#          "time": "1672309999",
+#          "rand": "1608060452",
+#          "netspeed": "0",
+#          "dui": "1F1F1DF9-48DC-41CA-ACCE-A3F3BEF9BFEA",
+#          "sv": "16.1.1",
+#          "smid": "1F1F1DF9-48DC-41CA-ACCE-A3F3BEF9BFEA",
+#          "channel": "Apple",
+#          "lng": "0.000000",
+#          "version": "1.11.20",
+#          "clientip": "",
+#          "deviceid": "1F1F1DF9-48DC-41CA-ACCE-A3F3BEF9BFEA",
+#          "platform": "ios",
+#          "ios_bundleid": "com.huayin.hualian",
+#          "product": "hualian",
+#          "lat": "0.000000",
+#          "network": "Wi-Fi",
+#          "model": "iPhone10,1",
+#          "deviceModel": "iPhone8",
+#          "sm_deviceid": "2019051615024550a43d5731e76e3386a37936d4beb3eb0169de22de2862c7",
+#          "no_sign": "1",
+#          "mobile": "13694000445",
+#          "password": "%s" % password}
+#     res = requests.post(url=u, data=d)
+#     res_json = json.dumps(json.loads(res.text), indent=4, ensure_ascii=False)
+#     # print(res_json)
+#     assert res.status_code == 200
+#     assert json.loads(res.text).get("errno") == 0
+#     sql_ssh = "select * from user where rid = '{}'".format(d.get("mobile"))
+#     assert len(SSH_select(sql_ssh)) != 0
+#     token = json.loads(res.text)["data"]["token"]
+#     anchor_saveToken(res)
+#     return token
 """
 活动，游戏中奖率，压测
 注册登陆（三方登陆），私信  上下麦 弹幕，（付费弹幕，查库）。首页，动态页，
