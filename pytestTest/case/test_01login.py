@@ -59,9 +59,6 @@ password = after_md5('123456')
 print(password)
 
 
-def test_03_login():
-    print(password)
-
 #  线上环境用户登陆
 # def test_03_userLogin():
 #     u = "http://passport.hualiantv.com/user/login"
