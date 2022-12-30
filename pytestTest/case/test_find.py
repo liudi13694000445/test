@@ -3,7 +3,7 @@ import requests
 import os, sys
 import pytest
 sys.path.append(os.getcwd())
-from utils.tokentools import user_readToken, anchor_readToken
+from utils.tokentools import testUser_readToken, testAnchor_readToken
 from utils.dbtools import SSH_select
 
 
@@ -11,7 +11,7 @@ def test_01_userFind():
     print("user")
     uids = []
     u = "http://live.test.hualiantv.com/publicRoomV2/RecommendAnchor/"
-    p = {"token": user_readToken()}
+    p = {"token": testUser_readToken()}
     res = requests.get(url=u, params=p)
     res_json = json.dumps(json.loads(res.text), indent=4, ensure_ascii=False)
     a = json.loads(res.text)
@@ -35,7 +35,7 @@ def test_02_anchorFind():
     print("anchor")
     uids = []
     u = "http://live.test.hualiantv.com/publicRoomV2/RecommendAnchor/"
-    p = {"token": anchor_readToken()}
+    p = {"token": testAnchor_readToken()}
     res = requests.get(url=u, params=p)
     res_json = json.dumps(json.loads(res.text), indent=4, ensure_ascii=False)
     a = json.loads(res.text)
